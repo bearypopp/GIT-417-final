@@ -1,42 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name=" viewport" content="width = 1280" >
-        <meta name="The Gentle Pour" content="a late-night, cozy cafe to cater those who need coffee and stay up late.">
-        <title> The Gentle Pour</title>
 
-        <!---Favicon, CSS, and JS links-->
-       <!--change favicon href once made!!!-->
-        <link rel="icon" type="image/png" href="images/favicon.png">
-        <link rel ="stylesheet" href="styles.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <!--Add a logo img link above the h1-->
+<head>
+    <meta charset="UTF-8">
+    <meta name=" viewport" content="width = 1280">
+    <meta name="The Gentle Pour" content="a late-night, cozy cafe to cater those who need coffee and stay up late.">
+    <title> The Gentle Pour</title>
+
+    <!---Favicon, CSS, and JS links-->
+    <!--change favicon href once made!!!-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!--Add a logo img link above the h1-->
+        <div class="Branding">
             <h1>The Gentle Pour</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#contest">Contest</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <!--Home Page-->
-            <section id="home">
-             <h2>Late night Coffee and Tea</h2>   
-            <p>Serving customers a cozy cup of coffee, matcha, or tea at the late night hours.</p>
-            </section>
+        </div>
+        <nav>
+            <ul class="navList">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contest">Contest</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Home Page-->
+        <section id="home">
+            <h2>Late night Coffee and Tea</h2>
+            <p>The Gentle Pour was created to bring comfort through carefully crafted drinks and a warm, welcoming atmosphere. Our menu focuses on small-batch espresso beverages and ceremonial-grade matcha, designed for moments of relaxation and connection.</p>
+        </section>
 
-            <!--Menu Page-->
-            <section id="Menu">
+        <!--Menu Page-->
+        <section id="menu">
+            <h2>Drinks</h2>
 
-            </section>
-        </main>
-    </body>
+            <!--Buttons for drink selection (JS)-->
+            <div id="drink-buttons"></div>
+                <button drink-data="cocoa-cloud">Cocoa Cloud</button>
+                <button drink-data="matcha-latte">Matcha Latte</button>
+                <button drink-data="morning-bloom">Morning Bloom</button>
+
+            <!--Menu Products-->
+            <div class="drink-display">
+             <article class="drink" id="cocoa-cloud">
+                <img src="images/cocoa-cloud.png" alt="Cocoa Cloud">
+                <h3>Cocoa Cloud</h3>
+                <p id="price">$5.75</p>
+                <p>A latte(hot only) made with sweetened condensed milk, half-and-half, and topped with cocoa powder for a velvety finish.</p>
+             </article>   
+
+             <article class="drink" id="matcha-latte">
+                <img src="images/matcha.png" alt="Matcha Latte">
+                <h3>Matcha Latte</h3>
+                <p id="price">$6.50</p>
+                <p>Ceremonial-grade Matcha by Midori Spring whisked smooth and served over milk of choice. Comes unsweetened by default.</p>
+             </article>   
+
+             <article class="drink" id="morning-bloom">
+                <img src="images/morning-bloom.png" alt="Morning Bloom">
+                <h3>Morning Bloom</h3>
+                <p id="price">$5.25</p>
+                <p>Inspired by the bold sweetness of café cubano, this cappuccino is steamed with milk of choice and a hint of cinnamon, creating a warm, creamy drink with a subtly spiced finish.</p>
+             </article>   
+            </div>
+        </section>
+
+       <!--Guessing Game Section--> 
+        <section id="contest">
+            <h2>Lucky Latte Challenge</h2>
+                <p>Guess a number between 1 and 10. If your guess matches our secret number, you'll receive a 10% off discount code for your next drink!</p>
+
+                <form id="guess-form" novalidate>
+                    <label for="guess-input">Enter your guess (1-10):</label>
+                    <input
+                        type="number";
+                        id="guess-input";
+                        name="guess";
+                        min="1";
+                        max="10";
+                        required
+                    >
+                    <button type="submit">Try Your Luck</button>
+                </form>
+                <p id="guess-result"></p>
+
+                <!--hide this message using CSS-->
+                <div id="win-msg">
+                    <p> You won! Use code <strong>COZY10</strong> for 10% your drink. </p>
+                </div>
+        </section>
+
+        <!--Contact Page-->
+        <section id="contact">
+            
+        </section>
+    </main>
+</body>
+
 </html>
