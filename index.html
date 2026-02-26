@@ -7,16 +7,22 @@
     <meta name="description" content="A late-night, cozy cafe for people who need coffee and stay up late.">
     <title> The Gentle Pour</title>
 
-    <!---Favicon, CSS, and JS links-->
     <!--change favicon href once made!!!-->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!--font link-->
+    <link rel="stylesheet" href="https://use.typekit.net/kqd8uvm.css">
+
+    <!--links to CSS and JS-->
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <header>
-        <!--Add a logo img link above the h1-->
+
+        <img src="images/logo.png" alt="cat pouring coffee" width="150px" height="150px">
         <div class="Branding">
             <h1>The Gentle Pour</h1>
         </div>
@@ -31,11 +37,14 @@
     </header>
     <main>
         <!--Home Page-->
-        <section id="home">
-            <h2>Late night Coffee and Tea</h2>
-            <p>The Gentle Pour was created to bring comfort through carefully crafted drinks and a warm, welcoming
-                atmosphere. Our menu focuses on small-batch espresso beverages and ceremonial-grade matcha, designed for
-                moments of relaxation and connection.</p>
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <h2>Late night Coffee and Tea</h2>
+                    <p>The Gentle Pour was created to bring comfort through carefully crafted drinks and a warm, welcoming
+                        atmosphere. Our menu focuses on small-batch espresso beverages and ceremonial-grade matcha, designed for
+                        moments of relaxation and connection.
+                    </p>
+            </div>    
         </section>
 
         <!--Menu Page-->
@@ -91,9 +100,7 @@
             <p id="guess-result"></p>
 
             <!--hide this message using CSS-->
-            <div id="win-msg">
-                <p> You won! Use code <strong>COZY10</strong> for 10% off your drink. </p>
-            </div>
+            <div id="game-message"></div>
         </section>
 
         <!--Contact Page-->
@@ -103,7 +110,7 @@
 
             <form id="contact-form" novalidate>
                 <!--Full Name-->
-                <label for="name">Full Name<span class="required">*</span></label>
+                <label for="name">Full Name <span class="required">*</span></label>
                 <input type="text" id="name" name="name" required>
                 <p class="error" id="name-error"></p>
 
@@ -136,12 +143,12 @@
                 <button type="submit">Send Message</button>
             </form>
         </section>
-        <footer>
-            <p><strong>The Gentle Pour</strong>— late-night coffee and matcha.</p>
-            <p>Hours: Mon-Sun 7:00 PM — 1:00 AM</p>
-            <p>&copy; 2026 The Gentle Pour</p>
-        </footer>
     </main>
+    <footer>
+        <p><strong>The Gentle Pour</strong>— late-night coffee and matcha.</p>
+        <p>Hours: Mon-Sun 7:00 PM — 1:00 AM</p>
+        <p>&copy; 2026 The Gentle Pour</p>
+    </footer>
 </body>
 
 </html>
