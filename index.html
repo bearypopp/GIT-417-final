@@ -33,81 +33,92 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        
+
         <button id="theme-toggle" type="button">
-        Dark Mode
-    </button>
+            Dark Mode
+        </button>
     </header>
     <main>
         <!--Home Page-->
         <section class="hero" id="home">
             <div class="hero-text">
                 <h2>Late night Coffee and Matcha</h2>
-                    <p>The Gentle Pour was created to bring comfort through carefully crafted drinks and a warm, welcoming
-                        atmosphere. Our menu focuses on small-batch espresso beverages and ceremonial-grade matcha, designed for
-                        moments of relaxation and connection.
-                    </p>
-            </div>    
+                <p>The Gentle Pour was created to bring comfort through carefully crafted drinks and a warm, welcoming
+                    atmosphere. Our menu focuses on small-batch espresso beverages and ceremonial-grade matcha, designed
+                    for
+                    moments of relaxation and connection.
+                </p>
+            </div>
         </section>
 
         <!--Menu Page-->
-        <section id="menu">
-            <h2>Drinks</h2>
+        <div class="menu-layout">
+            <section id="menu">
+                <h2>Drinks</h2>
 
-            <!--Buttons for drink selection (JS)-->
-            <div id="drink-buttons">
-                <button type="button" data-drink="cocoa-cloud">Cocoa Cloud</button>
-                <button type="button" data-drink="matcha-latte">Matcha Latte</button>
-                <button type="button" data-drink="morning-bloom">Morning Bloom</button>
-            </div>
+                <!--Menu Products-->
+                <div class="drink-display">
+                    <!--Buttons for drink selection (JS)-->
+                    <div id="drink-buttons">
+                        <button type="button" data-drink="cocoa-cloud">Cocoa Cloud</button>
+                        <button type="button" data-drink="matcha-latte">Matcha Latte</button>
+                        <button type="button" data-drink="morning-bloom">Morning Bloom</button>
+                    </div>
+                    <article class="drink" id="cocoa-cloud">
+                        <img src="images/cocoa-cloud.png" alt="Cocoa Cloud">
+                        <div class="drink-info">
+                            <h3>Cocoa Cloud</h3>
+                            <p class="price">$5.75</p>
+                            <p>A latte(hot only) made with sweetened condensed milk, half-and-half, and topped with
+                                cocoa
+                                powder
+                                for a velvety finish.</p>
+                        </div>
+                    </article>
 
-            <!--Menu Products-->
-            <div class="drink-display">
-                <article class="drink" id="cocoa-cloud">
-                    <img src="images/cocoa-cloud.png" alt="Cocoa Cloud">
-                    <div class="drink-info">
-                    <h3>Cocoa Cloud</h3>
-                    <p class="price">$5.75</p>
-                    <p>A latte(hot only) made with sweetened condensed milk, half-and-half, and topped with cocoa powder
-                        for a velvety finish.</p>
-                   </div>     
-                </article>
+                    <article class="drink" id="matcha-latte">
+                        <img src="images/matcha.png" alt="Matcha Latte">
+                        <div class="drink-info">
+                            <h3>Matcha Latte</h3>
+                            <p class="price">$6.50</p>
+                            <p>Ceremonial-grade Matcha by Midori Spring whisked smooth and served over milk of choice.
+                                Comes
+                                unsweetened by default.</p>
+                        </div>
+                    </article>
 
-                <article class="drink" id="matcha-latte">
-                    <img src="images/matcha.png" alt="Matcha Latte">
-                    <h3>Matcha Latte</h3>
-                    <p class="price">$6.50</p>
-                    <p>Ceremonial-grade Matcha by Midori Spring whisked smooth and served over milk of choice. Comes
-                        unsweetened by default.</p>
-                </article>
+                    <article class="drink" id="morning-bloom">
+                        <img src="images/morning-bloom.png" alt="Morning Bloom">
+                        <div class="drink-info">
+                            <h3>Morning Bloom</h3>
+                            <p class="price">$5.25</p>
+                            <p>Inspired by the bold sweetness of café cubano, this cappuccino is steamed with milk of
+                                choice
+                                and
+                                a hint of cinnamon, creating a warm, creamy drink with a subtly spiced finish.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-                <article class="drink" id="morning-bloom">
-                    <img src="images/morning-bloom.png" alt="Morning Bloom">
-                    <h3>Morning Bloom</h3>
-                    <p class="price">$5.25</p>
-                    <p>Inspired by the bold sweetness of café cubano, this cappuccino is steamed with milk of choice and
-                        a hint of cinnamon, creating a warm, creamy drink with a subtly spiced finish.</p>
-                </article>
-            </div>
-        </section>
-
-        <!--Guessing Game Section-->
-        <section id="contest">
-            <h2>Lucky Latte Challenge</h2>
-            <p>Guess a number between 1 and 10. If your guess matches our secret number, you'll receive a 10% off
-                discount code for your next drink!</p>
-
-            <form id="guess-form" novalidate>
-                <label for="guess-input">Enter your guess (1-10):</label>
-                <input type="number" id="guess-input" name="guess" min="1" max="10" required>
-                <button type="submit">Try Your Luck</button>
-            </form>
-            <p id="guess-result"></p>
-
-            <!--hide this message using CSS-->
-            <div id="game-message"></div>
-        </section>
-
+            <!--Guessing Game Section-->
+            <section id="contest">
+                <h2>Lucky Latte Challenge</h2>
+                <div class="contest-card">
+                    <p>Guess a number between 1 and 10. If your guess matches our secret number, you'll receive a 10% off
+                        discount code for your next drink!</p>
+            
+                    <form id="guess-form" novalidate>
+                        <label for="guess-input">Enter your guess (1-10):</label>
+                        <input type="number" id="guess-input" name="guess" min="1" max="10" required>
+                        <button type="submit">Try Your Luck</button>
+                    </form>
+                    <p id="guess-result"></p>
+                    <!--hide this message using CSS-->
+                    <div id="game-message"></div>
+                </div>
+            </section>
+        </div>
         <!--Contact Page-->
         <section id="contact">
             <h2>Contact Us</h2>
