@@ -183,7 +183,6 @@ body.dark{
     --bg-dark: #353535;
     --bg-soft: #3F3F3F;
 
-header, main, footer{
     --text-main: #F4F1EE;
     --text-on-dark: #F4F1EE;
     --text-muted: #D2C8C2;
