@@ -19,7 +19,7 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="dark">
     <header>
         <img src="images/logo.png" alt="cat pouring coffee" width="150px" height="150px">
         <div class="branding">
@@ -60,11 +60,11 @@
                 <div class="drink-display">
                     <!--Buttons for drink selection (JS)-->
                     <div id="drink-buttons">
-                        <button type="button" data-drink="cocoa-cloud">Cocoa Cloud</button>
+                        <button type="button" class="active" data-drink="cocoa-cloud">Cocoa Cloud</button>
                         <button type="button" data-drink="matcha-latte">Matcha Latte</button>
                         <button type="button" data-drink="morning-bloom">Morning Bloom</button>
                     </div>
-                    <article class="drink" id="cocoa-cloud">
+                    <article class="drink show" id="cocoa-cloud">
                         <img src="images/cocoa-cloud.png" alt="Cocoa Cloud">
                         <div class="drink-info">
                             <h3>Cocoa Cloud</h3>
@@ -105,9 +105,10 @@
             <section id="contest">
                 <h2>Lucky Latte Challenge</h2>
                 <div class="contest-card">
-                    <p>Guess a number between 1 and 10. If your guess matches our secret number, you'll receive a 10% off
+                    <p>Guess a number between 1 and 10. If your guess matches our secret number, you'll receive a 10%
+                        off
                         discount code for your next drink!</p>
-            
+
                     <form id="guess-form" novalidate>
                         <label for="guess-input">Enter your guess (1-10):</label>
                         <input type="number" id="guess-input" name="guess" min="1" max="10" required>
@@ -125,45 +126,56 @@
             <p>Have questions, comments, or other feedback? Send us a message below!</p>
 
             <form id="contact-form" novalidate>
-                <!--Full Name-->
-                <label for="name">Full Name <span class="required">*</span></label>
-                <input type="text" id="name" name="name" required>
-                <p class="error" id="name-error"></p>
+                <div class="contact-row">
+                    <!--Full Name-->
+                    <div class="field">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                        <p class="error" id="name-error"></p>
+                    </div>
+                    <div class="field fieldset">
+                        <fieldset>
+                            <legend>Preferred Method of Contact <span class="required">*</span></legend>
+                            <div class="radio">
+                                <input type="radio" name="contact-pref" id="pref-email" value="email">
+                                <label for="pref-email">Email</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="contact-pref" id="pref-phone" value="phone">
+                                <label for="pref-phone">Phone</label>
+                            </div>
+                            <p class="error" id="method-error"></p>
+                        </fieldset>
+                    </div>
 
-                <fieldset>
-                    <legend>Preferred Method of Contact <span class="required">*</span></legend>
+                    <!--Email-->
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                        <p class="error" id="email-error"></p>
+                    </div>
+                    <!--Phone-->
+                    <div class="field">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <p class="error" id="phone-error"></p>
+                    </div>
+                    <!--Comments-->
+                    <div class="field field-comments">
+                        <label for="comments">Comments <span class="required">*</span></label>
+                        <textarea id="comments" name="comments" required></textarea>
+                        <p class="error" id="comments-error"></p>
+                    </div>
 
-                    <input type="radio" name="contact-pref" id="pref-email" value="email" checked required>
-                    <label for="pref-email">Email</label>
-
-                    <input type="radio" name="contact-pref" id="pref-phone" value="phone">
-                    <label for="pref-phone">Phone</label>
-
-                    <p class="error" id="method-error"></p>
-                </fieldset>
-
-                <!--Email-->
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-                <p class="error" id="email-error"></p>
-                <!--Phone-->
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone">
-                <p class="error" id="phone-error"></p>
-
-                <!--Comments-->
-                <label for="comments">Comments <span class="required">*</span></label>
-                <textarea id="comments" name="comments" required></textarea>
-                <p class="error" id="comments-error"></p>
-
-                <button type="submit">Send Message</button>
+                    <div class="field field-button">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </div>
             </form>
         </section>
     </main>
     <footer>
-        <p><strong>The Gentle Pour</strong>— late-night coffee and matcha.</p>
-        <p>Hours: Mon-Sun 7:00 PM — 1:00 AM</p>
-        <p>&copy; 2026 The Gentle Pour</p>
+        <p><strong>The Gentle Pour</strong> | Hours: Mon-Sun 7:00 PM — 1:00 AM | &copy; 2026 The Gentle Pour</p>
     </footer>
 </body>
 
