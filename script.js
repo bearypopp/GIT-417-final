@@ -156,6 +156,7 @@ contactForm.addEventListener("submit", (event) => {
     }
     }
 
+//shows users their input based of successfully submitting their form
     if (isValid) {
         const formInfo = {
             fullName: fullName.value.trim(),
@@ -164,11 +165,9 @@ contactForm.addEventListener("submit", (event) => {
             phone: phone.value.trim(),
             comments: comments.value.trim()
         };
-//shows users their input based of successfully submitting their form
         alert(
             "Form Submitted Successfully! \n\n" + "Full Name: " + formInfo.fullName + "\n" + "Preferred Contact: " + formInfo.preferredContact + "\n" + "Email: " + (formInfo.email || "Not provided") + "\n" + "Phone: " + (formInfo.phone || "Not provided") + "\n" + "Comments: " + formInfo.comments
         );
-
         contactForm.reset();
     }
    
